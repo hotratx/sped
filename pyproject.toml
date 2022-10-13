@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "new_sped"
+version = "0.1.0"
+description = ""
+authors = ["hotratx <mgviero@gmail.com>"]
+readme = "README.md"
+packages = [{include = "new_sped"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^1.5.0"
+psycopg2 = "^2.9.4"
+beautifulsoup4 = "^4.11.1"
+PyAutoGUI = "^0.9.53"
+pytest-playwright = "^0.3.0"
+tqdm = "^4.64.1"
+sqlmodel = "^0.0.8"
+python-dotenv = "^0.21.0"
+psycopg2-binary = "^2.9.4"
+ipython = "^8.5.0"
+typer = {extras = ["all"], version = "^0.6.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
