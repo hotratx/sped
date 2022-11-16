@@ -26,5 +26,5 @@ def call_cert_pi():
 # print(f'EMPRESAS: {x}')
 
 if __name__ == "__main__":
-    # create_db()
+    create_db()
     app()

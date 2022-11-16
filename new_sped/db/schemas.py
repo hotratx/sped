@@ -1,5 +1,5 @@
+from datetime import date
 from typing import Optional
-
 from sqlmodel import Field, SQLModel
 from pydantic import EmailStr, validator
 import re
@@ -19,7 +19,26 @@ class EmpresaIn(SQLModel):
         return v
 
 
-class DadosIn(SQLModel):
-    da_solicit: Optional[int] = Field(default=None)
-    # divida_ativa: Optional[int] = Field(default=None)
-    # t_solicit: Optional[int] = Field(default=None)
+class UsuariosIn(SQLModel):
+    nome: Optional[str] = Field(default=None)
+    cpf: Optional[str] = Field(default=None)
+
+
+class Cert_piIn(SQLModel):
+    da_solicit: Optional[str] = Field(default=None)
+    da_value: Optional[str] = Field(default=None)
+    t_solicit: Optional[str] = Field(default=None)
+    t_value: Optional[str] = Field(default=None)
+
+
+class Sped_sendIn(SQLModel):
+    period: Optional[date] = Field(default=None)
+    date_send: Optional[date] = Field(default=None)
+    send: Optional[str] = Field(default=None)
+    stats: Optional[str] = Field(default=None)
+
+
+class Sped_errorIn(SQLModel):
+    group: Optional[str] = Field(default=None)
+    type: Optional[str] = Field(default=None)
+    inconsis: Optional[str] = Field(default=None)
